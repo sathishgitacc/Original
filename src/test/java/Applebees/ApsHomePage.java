@@ -39,7 +39,7 @@ public class ApsHomePage extends Base{
 	{
 		driver = startbrowser();
 		log.info("browser started");
-		System.out.println("Gittest");
+		System.out.println("Gittest1");
 		
 	}
 	@AfterTest
