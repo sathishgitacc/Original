@@ -27,7 +27,7 @@ import pageobjectmodel.OrdermethodsObjects;
 import pageobjectmodel.SamplerPageObjecs;
 import resources.Base;
 
-public class ApsHomePage extends Base{
+public class ApsHomePageTest extends Base{
 	
 	public static Logger log= LogManager.getLogger(Base.class.getName());
 	

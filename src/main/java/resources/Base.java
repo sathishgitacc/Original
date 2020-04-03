@@ -56,8 +56,8 @@ public class Base {
 		driver = new FirefoxDriver();
 	}
 	
-	//url = prop.getProperty("env");
-	//driver.get(url);
+	url = prop.getProperty("env");
+	driver.get(url);
 	
 	/*if (TestEnv.equalsIgnoreCase("prod"))
 	{
