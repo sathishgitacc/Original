@@ -1,6 +1,7 @@
 package Applebees;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,13 +27,14 @@ import pageobjectmodel.ModifierPageObjects;
 import pageobjectmodel.OrdermethodsObjects;
 import pageobjectmodel.SamplerPageObjecs;
 import resources.Base;
+import resources.dataDriver;
 
 public class ApsHomePageTest extends Base{
 	
 	public static Logger log= LogManager.getLogger(Base.class.getName());
 	
 	public WebDriverWait wait,wait1;
-	
+	public dataDriver d = new dataDriver();
 	
 	@BeforeTest
 	public void sb() throws IOException
@@ -74,8 +76,17 @@ public class ApsHomePageTest extends Base{
 	
 		LoginPageObjects lpo = new LoginPageObjects(driver);
 		
-		lpo.Emailid().sendKeys("sathish.murugesan@aspiresys.com");
-		lpo.Pwd().sendKeys("Newpass1!");
+		ArrayList<String> data = d.getData("Login1");
+		
+		
+		System.out.println(data.get(1));
+		System.out.println(data.get(2));
+		
+		lpo.Emailid().sendKeys(data.get(1));
+		
+		lpo.Pwd().sendKeys(data.get(2));
+	
+		
 		System.out.println("Valid Credentials");
 		lpo.Login().click();
 		lpo.MenuClickClick().click();
