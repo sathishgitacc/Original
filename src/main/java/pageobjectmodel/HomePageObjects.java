@@ -15,7 +15,7 @@ WebDriver driver;
 	}
 	
 	By Login = By.xpath("//div[@class='header-sub__account']/a");
-	By menu = By.xpath("/a[@href='/en/gift-cards']");
+	By menu = By.xpath("//a[@href='/en/gift-cards']");
 	By text = By.xpath("//h2[@class='module-title']");
 	
 	public WebElement Signin()

@@ -35,13 +35,15 @@ public class ApsHomePageTest extends Base{
 	
 	public WebDriverWait wait,wait1;
 	public dataDriver d = new dataDriver();
+//	public JavascriptExecutor executor = (JavascriptExecutor)driver;
+	public WebElement e,e1,e2,e3;
 	
 	@BeforeTest
 	public void sb() throws IOException
 	{
 		driver = startbrowser();
 		log.info("browser started");
-		System.out.println("Gittest1");
+		//System.out.println("Gittest1");
 		
 	}
 	@AfterTest
@@ -93,7 +95,10 @@ public class ApsHomePageTest extends Base{
 		lpo.Locsubnav().click();
 		lpo.Changestore().click();
 		lpo.ChangestoreEnterText().clear();
-		lpo.ChangestoreEnterText().sendKeys("Glendale,CA,USA");
+		
+		ArrayList<String> data1 = d.getData("Location1");
+		lpo.ChangestoreEnterText().sendKeys(data1.get(1));
+		System.out.println(data1.get(1));
 		lpo.GoButtonClick().click();
 		//lpo.DDSelector().click();
 		lpo.clickchangeres().click();			
@@ -105,18 +110,17 @@ public class ApsHomePageTest extends Base{
 	public void mp()
 	{
 	
-		driver.findElement(By.xpath("//li[@data-item-id='13585']/a")).click();
+		//driver.findElement(By.xpath("//li[@data-item-id='13585']/a")).click();
 		
 		//WebElement img = driver.findElement(By.xpath("//body[@data-id='{830D4D40-89B3-4356-B592-1D67D037A404}']"));
-	
 		
 	
-MenuPageObject mo = new MenuPageObject(driver);
+  MenuPageObject mo = new MenuPageObject(driver);
 	
-	WebElement but1 = mo.Clickitem();
+	 e = mo.Clickitem();
 	
 	JavascriptExecutor executor = (JavascriptExecutor)driver;
-	executor.executeScript("arguments[0].click();",but1);
+	executor.executeScript("arguments[0].click();",e);
 	
 //Actions act = new Actions (driver);
 //	act.moveToElement(img).click(but1).build().perform();
@@ -124,7 +128,7 @@ MenuPageObject mo = new MenuPageObject(driver);
 
    }
 
-	@Test(priority = 3)
+/*	@Test(priority = 3)
 	public void sp()
 	{
 		SamplerPageObjecs so = new SamplerPageObjecs(driver);
@@ -134,7 +138,7 @@ MenuPageObject mo = new MenuPageObject(driver);
 		//so.Clickmod().click();
 		//so.ClickAtd().click();
 		
-	}
+	} */
 	
 
     @Test(priority = 4)
@@ -142,16 +146,24 @@ MenuPageObject mo = new MenuPageObject(driver);
    {
 	  ModifierPageObjects mpo = new ModifierPageObjects(driver);
 	  
-	   mpo.SelectM1().click();
-	  mpo.SelectNM1().click();
+	   e =  mpo.SelectM1();
+	JavascriptExecutor executor = (JavascriptExecutor)driver;
+	  executor.executeScript("arguments[0].click();",e);
+	  
+	  // mpo.SelectM1().click();
+	  e1 = mpo.SelectNM1();
+	  executor.executeScript("arguments[0].click();",e1);
+	  
 	//wait = new WebDriverWait(driver,10);
 	//wait.until(ExpectedConditions.visibilityOf(By.xpath("//input[@modifiername='Chicken Quesadilla']")));
 	//WebElement e = wait.until(ExpectedConditions.visibilityOf(mpo.SelectM2()));
 			 //visibilityOf(mpo.SelectM2()));
 	 //  e.click();
-	   mpo.SelectM2().click();
+	  
+	  e2 =  mpo.SelectM2();
+	  executor.executeScript("arguments[0].click();",e2);
 	   
-	  mpo.SelectNM2().click();
+	 // mpo.SelectNM2().click();
 	  mpo.Submit().click();
 	//  mpo.CartIcon().click();
  wait = new WebDriverWait(driver,3);
@@ -165,7 +177,10 @@ MenuPageObject mo = new MenuPageObject(driver);
 	mpo.Checkout().click();
 	mpo.Ptc().click();
 	mpo.Pai().click();
-	log.info("clicked pay in reataurant");
+	 e3 =  mpo.Po();
+	 executor.executeScript("arguments[0].click();",e3);
+	//mpo.Po().click();
+	/*log.info("clicked pay in reataurant");
 	Actions act = new Actions(driver);
 	//act.moveToElement(mpo.Po()).build().perform();
 	//mpo.Po().click();
@@ -175,7 +190,7 @@ MenuPageObject mo = new MenuPageObject(driver);
  if(inv2)
  	{
 	// mpo.Po().click();
-   } 	
+   } 	*/
 	
 }
     

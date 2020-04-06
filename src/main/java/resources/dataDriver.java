@@ -45,47 +45,43 @@ public class dataDriver {
 	if(value.getStringCellValue().equalsIgnoreCase("TestCase"))
 	{
 	coloumn=k;
-
 	}
-
 	k++;
 	}
 	System.out.println(coloumn);
 
 	////once coloumn is identified then scan entire testcase coloum to identify purcjhase testcase row
 	while(rows.hasNext())
-	{
+   {
 
 	Row r=rows.next();
 
-	if(r.getCell(coloumn).getStringCellValue().equalsIgnoreCase(testcaseName))
-	{
-
+	if(r.getCell(coloumn).getStringCellValue().equalsIgnoreCase(testcaseName))		
+     {
 	////after you grab purchase testcase row = pull all the data of that row and feed into test
 
 	Iterator<Cell>  cv=r.cellIterator();
 	while(cv.hasNext())
-	{
+  {
 	Cell c= cv.next();
 	if(c.getCellTypeEnum()==CellType.STRING)
-	{
-
+	  {
 	a.add(c.getStringCellValue());
-	}
-	else{
-
+	  }
+	else
+	  {
 	a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
+	  }
+  }
+      }
 
-	}
-	}
-	}
+    }
 
+ }
+	
 	}
-
-	}
-	}
-	return a;
-
+	
+return a;
 	}
 
 }

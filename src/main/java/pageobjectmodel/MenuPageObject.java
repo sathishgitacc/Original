@@ -13,7 +13,7 @@ WebDriver driver;
 		this.driver = driver;
 	}
 	
-	By Item = By.xpath("//a[@href='/en/menu/build-your-sampler/build-your-sampler-choose-2']");
+	By Item = By.xpath("//a[@href='/en/menu/steaks-and-ribs/double-glazed-baby-back-ribs?order=1']");
 	
 	public WebElement Clickitem()
 	{

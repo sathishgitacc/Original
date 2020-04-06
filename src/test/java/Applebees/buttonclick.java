@@ -17,9 +17,13 @@ public class buttonclick {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://www.applebees.com/en/menu/build-your-sampler/build-your-sampler-choose-2");
-		driver.findElement(By.xpath("//li[@menuitemid='205371395']/div[2]/p")).click();
+		driver.get("https://www.facebook.com/");
+		driver.findElement(By.cssSelector("input[type='email']")).sendKeys("Hi");
+		driver.findElement(By.cssSelector("input[value*='Log']")).click(); //Css selector Regular Expression
+		driver.findElement(By.xpath("//input[contains(@name,'emai')]")).sendKeys("Hi"); //Xpath Regular Expression
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Hi");
+	
 
 	}
-
 }
+

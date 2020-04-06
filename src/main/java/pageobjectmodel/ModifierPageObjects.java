@@ -13,16 +13,17 @@ WebDriver driver;
 		this.driver = driver;
 	}
 	
-	By fm = By.xpath("//li[@menuitemid='205371395']/div[2]/p");
-	By fnm = By.linkText("DONE");
-	By sm = By.xpath("//input[@value='205371412']");
+	By fm = By.xpath("//input[@modifiername='No sauce']");
+	By fnm = By.xpath("//a[@modifiername='Fries']/img");
+	By sm = By.xpath("//li[@menuitemid = '3613536956']/div/a");
 	By snm = By.linkText("DONE");
-	By ato = By.xpath("//a[@class='AddToOrder']");
+	By ato = By.className("customization-cta-buttontext");
 	By ci = By.xpath("//a[@id='MyCart']/i");
 	By cb = By.xpath("//a[@class='lnkViewCart']");
 	By ptc = By.xpath("//a[@title='Proceed to Checkout']");
 	By pis = By.xpath("//li[@data-item='c-paymentoptions__payinstore']");
-	By plo = By.xpath("//a[@href='/en/order/confirmation']");
+	//By plo = By.xpath("//a[@href='/en/order/confirmation']");
+	By plo = By.xpath("//a[@title='Place Order']");
 	
 	public WebElement SelectM1()
 	{
