@@ -5,9 +5,9 @@
     <classes>
       <class name="Applebees.ApsHomePageTest">
         <methods>
-          <include name="sb"/>
+          <include name="hp"/>
           <include name="cb"/>
-          <include name="modpage"/>
+          <include name="startbrowser"/>
         </methods>
       </class> <!-- Applebees.ApsHomePageTest -->
     </classes>

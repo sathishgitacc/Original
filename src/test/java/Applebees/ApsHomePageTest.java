@@ -36,58 +36,24 @@ public class ApsHomePageTest extends Base{
 	public WebDriverWait wait,wait1;
 	public dataDriver d = new dataDriver();
 //	public JavascriptExecutor executor = (JavascriptExecutor)driver;
-	public WebElement e,e1,e2,e3;
+	public WebElement e,e1,e2,e3,e4;
 	
-	@BeforeTest
-	public void sb() throws IOException
-	{
-		driver = startbrowser();
-		log.info("browser started");
-		//System.out.println("Gittest1");
-		
-	}
-	@AfterTest
-	public void cb() throws IOException, InterruptedException
 	
-	{
-		//wait = new WebDriverWait(driver,3);
-		//.driverwait.withTimeout(timeout)
-		
-		Thread.sleep(1000);
-		driver.close();
-		log.info("browser closed");
-		
-	}
-	
-	@Test(priority = 0)
+	@Test
 	public void hp() throws IOException
 	{
 
-
-		//driver.get("https://www.applebees.com/en");
 		HomePageObjects ho = new HomePageObjects(driver);
+		
 		ho.Signin().click();
-		log.info("Clicked Sign In");
-    }
 	
-
-	@Test(priority = 1)
-	public void lp() throws IOException
-	{
-
-	
-		LoginPageObjects lpo = new LoginPageObjects(driver);
+	    LoginPageObjects lpo = new LoginPageObjects(driver);
 		
 		ArrayList<String> data = d.getData("Login1");
-		
-		
-		System.out.println(data.get(1));
+        System.out.println(data.get(1));
 		System.out.println(data.get(2));
-		
 		lpo.Emailid().sendKeys(data.get(1));
-		
 		lpo.Pwd().sendKeys(data.get(2));
-	
 		
 		System.out.println("Valid Credentials");
 		lpo.Login().click();
@@ -100,98 +66,38 @@ public class ApsHomePageTest extends Base{
 		lpo.ChangestoreEnterText().sendKeys(data1.get(1));
 		System.out.println(data1.get(1));
 		lpo.GoButtonClick().click();
-		//lpo.DDSelector().click();
 		lpo.clickchangeres().click();			
-		//lpo.MenuClickClick().click();
 	
-	}
-	
-	@Test(priority = 2)
-	public void mp()
-	{
-	
-		//driver.findElement(By.xpath("//li[@data-item-id='13585']/a")).click();
 		
-		//WebElement img = driver.findElement(By.xpath("//body[@data-id='{830D4D40-89B3-4356-B592-1D67D037A404}']"));
+		MenuPageObject mo = new MenuPageObject(driver);
 		
-	
-  MenuPageObject mo = new MenuPageObject(driver);
-	
-	 e = mo.Clickitem();
-	
-	JavascriptExecutor executor = (JavascriptExecutor)driver;
-	executor.executeScript("arguments[0].click();",e);
-	
-//Actions act = new Actions (driver);
-//	act.moveToElement(img).click(but1).build().perform();
-	//mo.Clickitem().click();
-
-   }
-
-/*	@Test(priority = 3)
-	public void sp()
-	{
-		SamplerPageObjecs so = new SamplerPageObjecs(driver);
-		WebElement but2 = so.Clickmod();
+		e = mo.Clickitem();
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();",but2);
-		//so.Clickmod().click();
-		//so.ClickAtd().click();
+		executor.executeScript("arguments[0].click();",e);
 		
-	} */
-	
-
-    @Test(priority = 4)
-   public void modpage() 
-   {
-	  ModifierPageObjects mpo = new ModifierPageObjects(driver);
-	  
-	   e =  mpo.SelectM1();
-	JavascriptExecutor executor = (JavascriptExecutor)driver;
-	  executor.executeScript("arguments[0].click();",e);
-	  
-	  // mpo.SelectM1().click();
-	  e1 = mpo.SelectNM1();
-	  executor.executeScript("arguments[0].click();",e1);
-	  
-	//wait = new WebDriverWait(driver,10);
-	//wait.until(ExpectedConditions.visibilityOf(By.xpath("//input[@modifiername='Chicken Quesadilla']")));
-	//WebElement e = wait.until(ExpectedConditions.visibilityOf(mpo.SelectM2()));
-			 //visibilityOf(mpo.SelectM2()));
-	 //  e.click();
-	  
-	  e2 =  mpo.SelectM2();
-	  executor.executeScript("arguments[0].click();",e2);
-	   
-	 // mpo.SelectNM2().click();
-	  mpo.Submit().click();
-	//  mpo.CartIcon().click();
- wait = new WebDriverWait(driver,3);
-	  
+		ModifierPageObjects mpo = new ModifierPageObjects(driver);
+		
+		e1 =  mpo.SelectM1();
+		executor.executeScript("arguments[0].click();",e1); 
+		e2 = mpo.SelectNM1();
+		executor.executeScript("arguments[0].click();",e2);
+		e3 =  mpo.SelectM2();
+		executor.executeScript("arguments[0].click();",e3);
+		mpo.Submit().click();
+		
+	  wait = new WebDriverWait(driver,3);  
 	  boolean inv1 = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='c-progress__spinner-container']")));
 	  System.out.println(inv1);
-   if(inv1)
-   	{
-  	 mpo.CartIcon().click();
-     } 
-	mpo.Checkout().click();
-	mpo.Ptc().click();
-	mpo.Pai().click();
-	 e3 =  mpo.Po();
-	 executor.executeScript("arguments[0].click();",e3);
-	//mpo.Po().click();
-	/*log.info("clicked pay in reataurant");
-	Actions act = new Actions(driver);
-	//act.moveToElement(mpo.Po()).build().perform();
-	//mpo.Po().click();
-	wait1 = new WebDriverWait(driver,6);
- boolean inv2 = wait1.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id='content-loading']")));
-	//System.out.println(inv2);
- if(inv2)
- 	{
-	// mpo.Po().click();
-   } 	*/
+	  if(inv1)
+	   	{
+	  	 mpo.CartIcon().click();
+	    } 
+		mpo.Checkout().click();
+		mpo.Ptc().click();
+		mpo.Pai().click();
+		
+		e4 =  mpo.Po();
+		executor.executeScript("arguments[0].click();",e4);
+    }
+}
 	
-}
-    
-}

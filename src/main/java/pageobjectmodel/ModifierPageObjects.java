@@ -13,7 +13,7 @@ WebDriver driver;
 		this.driver = driver;
 	}
 	
-	By fm = By.xpath("//input[@modifiername='No sauce']");
+	public By fm = By.xpath("//input[@value='3613536940']");
 	By fnm = By.xpath("//a[@modifiername='Fries']/img");
 	By sm = By.xpath("//li[@menuitemid = '3613536956']/div/a");
 	By snm = By.linkText("DONE");

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
 <listeners>
-<listener class-name = "DB.lis"/>
+<listener class-name = "customeListeners.lis"/>
 <listener class-name = "customeListeners.ExtentReporterNG"/>
 </listeners>
+  
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Applebees.ApsHomePageTest"/>
+      <class name="Applebees.ApsHomePageTest"/> 
+        <class name="Applebees.GiftcardsTest"/> 
     </classes>
   </test> <!-- Test -->
+  
+ 
 </suite> <!-- Suite -->

@@ -21,7 +21,7 @@ public class ApsMenuDisplayed extends Base
 	public void sb() throws IOException
 	{
 		driver = startbrowser();
-		log.info("Browser started");
+	
 	}
 	@AfterTest
 	public void cb() throws IOException, InterruptedException
@@ -33,7 +33,7 @@ public class ApsMenuDisplayed extends Base
 		driver.close();
 	}
 	
-	@Test(priority = 0)
+	@Test
 	public void hp() throws IOException
 	{
 		//driver.get("https://www.applebees.com/en");

@@ -1,4 +1,4 @@
-package DB;
+package customeListeners;
 
 import java.io.IOException;
 
@@ -7,14 +7,15 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import resources.Base;
-import resources.screenshot;
 
 public class lis implements ITestListener{
+	
+	//String str;
 
 	//@Override
 	
-	//Base b = new Base();
-	screenshot s = new screenshot();
+	Base b = new Base();
+	//screenshot s = new screenshot();
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		/*try {
@@ -46,7 +47,7 @@ public class lis implements ITestListener{
 		// TODO Auto-generated method stub
 	//	;
 		try {
-			s.getSS(result.getName());
+			b.getSS(result.getName());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -16,7 +16,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 //import org.testng.annotations.Test;
 
@@ -26,6 +29,7 @@ public class Base {
 	public static WebDriver driver;
 	public  Properties prop;
 	public String url;
+	//public WebDriverWait wait,wait1;
 	//private File Null;
 	//public File Null;
 	//public File src;
@@ -33,8 +37,9 @@ public class Base {
 	//source=null;
 	
 	public static Logger log= LogManager.getLogger(Base.class.getName());
-	//@Test
+
 	
+	@BeforeTest
 	public WebDriver startbrowser() throws IOException
 	{
 	
@@ -65,16 +70,29 @@ public class Base {
 	}*/
 	
 	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	return driver;
 	
 	}
 	
-/*public void getSS(String result) throws IOException
+	@AfterTest
+	public void cb() throws IOException, InterruptedException
+	
 	{
-src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		//wait = new WebDriverWait(driver,3);
+		//.driverwait.withTimeout(timeout)
+		
+		Thread.sleep(1000);
+		driver.close();
+		log.info("browser closed");
+		
+	}
+	
+public void getSS(String result) throws IOException
+	{
+File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 FileHandler.copy(src,new File("./SS/"+result+"screenshot.png"));
 	//return result;
 	
-	} */
+	} 
 }
