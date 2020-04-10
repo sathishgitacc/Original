@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56446" started-at="2020-04-08T04:45:40Z" finished-at="2020-04-08T04:46:37Z">
+  <suite name="Suite" duration-ms="87812" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:29:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="56446" started-at="2020-04-08T04:45:40Z" finished-at="2020-04-08T04:46:37Z">
+    <test name="Test" duration-ms="58574" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:28:49Z">
       <class name="Applebees.ApsHomePageTest">
-        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.ApsHomePageTest@3c22fc4c]" name="startbrowser" is-config="true" duration-ms="15216" started-at="2020-04-08T04:45:40Z" finished-at="2020-04-08T04:45:55Z">
+        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="startbrowser" is-config="true" duration-ms="16268" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:28:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startbrowser -->
-        <test-method status="PASS" signature="hp()[pri:0, instance:Applebees.ApsHomePageTest@3c22fc4c]" name="hp" duration-ms="40101" started-at="2020-04-08T04:45:55Z" finished-at="2020-04-08T04:46:36Z">
+        <test-method status="PASS" signature="hp()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="hp" duration-ms="41216" started-at="2020-04-10T09:28:06Z" finished-at="2020-04-10T09:28:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hp -->
-        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.ApsHomePageTest@3c22fc4c]" name="cb" is-config="true" duration-ms="1105" started-at="2020-04-08T04:46:36Z" finished-at="2020-04-08T04:46:37Z">
+        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="cb" is-config="true" duration-ms="1075" started-at="2020-04-10T09:28:48Z" finished-at="2020-04-10T09:28:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cb -->
       </class> <!-- Applebees.ApsHomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+    <test name="Test1" duration-ms="29228" started-at="2020-04-10T09:28:49Z" finished-at="2020-04-10T09:29:18Z">
+      <class name="Applebees.GiftcardsTest">
+        <test-method status="PASS" signature="beginResult()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="beginResult" is-config="true" duration-ms="116" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beginResult -->
+        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="startbrowser" is-config="true" duration-ms="17353" started-at="2020-04-10T09:28:49Z" finished-at="2020-04-10T09:29:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startbrowser -->
+        <test-method status="PASS" signature="gcpage()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="gcpage" duration-ms="10802" started-at="2020-04-10T09:29:06Z" finished-at="2020-04-10T09:29:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gcpage -->
+        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="cb" is-config="true" duration-ms="1071" started-at="2020-04-10T09:29:17Z" finished-at="2020-04-10T09:29:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cb -->
+        <test-method status="PASS" signature="endResult()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="endResult" is-config="true" duration-ms="245" started-at="2020-04-10T09:29:18Z" finished-at="2020-04-10T09:29:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endResult -->
+      </class> <!-- Applebees.GiftcardsTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>

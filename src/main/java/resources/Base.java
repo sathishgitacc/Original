@@ -24,7 +24,9 @@ import org.testng.annotations.Test;
 //import org.testng.annotations.Test;
 
 
-public class Base {
+public class Base extends extentreport
+
+{
 	
 	public static WebDriver driver;
 	public  Properties prop;
@@ -46,6 +48,9 @@ public class Base {
 	prop = new Properties();
 	FileInputStream fis = new FileInputStream("./src/main/java/resources/data.properties");
 	prop.load(fis);
+	
+	
+	//String browsername = System.getProperty("browser");
 	
 	String browsername = prop.getProperty("browser");
 	

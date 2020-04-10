@@ -4,15 +4,19 @@
 
 <listeners>
 <listener class-name = "customeListeners.lis"/>
-<listener class-name = "customeListeners.ExtentReporterNG"/>
 </listeners>
   
   <test thread-count="5" name="Test">
     <classes>
       <class name="Applebees.ApsHomePageTest"/> 
-        <class name="Applebees.GiftcardsTest"/> 
     </classes>
   </test> <!-- Test -->
+  
+    <test thread-count="5" name="Test1">
+    <classes>
+      <class name="Applebees.GiftcardsTest"/> 
+    </classes>
+  </test>
   
  
 </suite> <!-- Suite -->

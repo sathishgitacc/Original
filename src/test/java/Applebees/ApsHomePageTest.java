@@ -18,6 +18,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 //import p1.demo;
 import pageobjectmodel.ConfirmRestaurantPageObjecs;
 import pageobjectmodel.HomePageObjects;
@@ -41,8 +43,9 @@ public class ApsHomePageTest extends Base{
 	
 	@Test
 	public void hp() throws IOException
+	
 	{
-
+		test = extent.createTest("test");
 		HomePageObjects ho = new HomePageObjects(driver);
 		
 		ho.Signin().click();
@@ -98,6 +101,7 @@ public class ApsHomePageTest extends Base{
 		
 		e4 =  mpo.Po();
 		executor.executeScript("arguments[0].click();",e4);
+		test.log(Status.PASS,"Pass");
     }
 }
 	

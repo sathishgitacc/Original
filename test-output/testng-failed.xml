@@ -5,8 +5,10 @@
     <classes>
       <class name="Applebees.ApsHomePageTest">
         <methods>
+          <include name="endResult"/>
           <include name="hp"/>
           <include name="cb"/>
+          <include name="beginResult"/>
           <include name="startbrowser"/>
         </methods>
       </class> <!-- Applebees.ApsHomePageTest -->
