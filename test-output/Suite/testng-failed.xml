@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="customeListeners.lis"/>
-    <listener class-name="customeListeners.ExtentReporterNG"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
+      <class name="Applebees.GiftcardsTest">
+        <methods>
+          <include name="endResult"/>
+          <include name="gcpage"/>
+          <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
+          <include name="beginResult"/>
+          <include name="startbrowser"/>
+        </methods>
+      </class> <!-- Applebees.GiftcardsTest -->
       <class name="Applebees.ApsHomePageTest">
         <methods>
+          <include name="endResult"/>
           <include name="hp"/>
           <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
+          <include name="beginResult"/>
           <include name="startbrowser"/>
         </methods>
       </class> <!-- Applebees.ApsHomePageTest -->

@@ -1,49 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="12" total="16" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="87812" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:29:18Z">
+  <suite name="Suite" duration-ms="196079" started-at="2021-07-18T09:32:03Z" finished-at="2021-07-18T09:35:19Z">
     <groups>
+      <group name="smoke">
+        <method signature="GiftcardsTest.gcpage()[pri:0, instance:Applebees.GiftcardsTest@769f71a9]" name="gcpage" class="Applebees.GiftcardsTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="58574" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:28:49Z">
-      <class name="Applebees.ApsHomePageTest">
-        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="startbrowser" is-config="true" duration-ms="16268" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:28:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startbrowser -->
-        <test-method status="PASS" signature="hp()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="hp" duration-ms="41216" started-at="2020-04-10T09:28:06Z" finished-at="2020-04-10T09:28:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hp -->
-        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.ApsHomePageTest@36c88a32]" name="cb" is-config="true" duration-ms="1075" started-at="2020-04-10T09:28:48Z" finished-at="2020-04-10T09:28:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cb -->
-      </class> <!-- Applebees.ApsHomePageTest -->
-    </test> <!-- Test -->
-    <test name="Test1" duration-ms="29228" started-at="2020-04-10T09:28:49Z" finished-at="2020-04-10T09:29:18Z">
+    <test name="Test" duration-ms="196079" started-at="2021-07-18T09:32:03Z" finished-at="2021-07-18T09:35:19Z">
       <class name="Applebees.GiftcardsTest">
-        <test-method status="PASS" signature="beginResult()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="beginResult" is-config="true" duration-ms="116" started-at="2020-04-10T09:27:50Z" finished-at="2020-04-10T09:27:50Z">
+        <test-method status="PASS" signature="beforeclassgctest()[pri:0, instance:Applebees.GiftcardsTest@769f71a9]" name="beforeclassgctest" is-config="true" duration-ms="0" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beginResult -->
-        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="startbrowser" is-config="true" duration-ms="17353" started-at="2020-04-10T09:28:49Z" finished-at="2020-04-10T09:29:06Z">
+        </test-method> <!-- beforeclassgctest -->
+        <test-method status="PASS" signature="startTestCase(org.testng.ITestResult)[pri:0, instance:Applebees.GiftcardsTest@769f71a9]" name="startTestCase" is-config="true" duration-ms="1" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=gcpage status=SUCCESS method=GiftcardsTest.gcpage()[pri:0, instance:Applebees.GiftcardsTest@769f71a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startbrowser -->
-        <test-method status="PASS" signature="gcpage()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="gcpage" duration-ms="10802" started-at="2020-04-10T09:29:06Z" finished-at="2020-04-10T09:29:17Z">
+        </test-method> <!-- startTestCase -->
+        <test-method status="PASS" signature="gcpage()[pri:0, instance:Applebees.GiftcardsTest@769f71a9]" name="gcpage" duration-ms="9421" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:35:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gcpage -->
-        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="cb" is-config="true" duration-ms="1071" started-at="2020-04-10T09:29:17Z" finished-at="2020-04-10T09:29:18Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Applebees.GiftcardsTest@769f71a9]" name="getResult" is-config="true" duration-ms="0" started-at="2021-07-18T09:35:07Z" finished-at="2021-07-18T09:35:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=gcpage status=SUCCESS method=GiftcardsTest.gcpage()[pri:0, instance:Applebees.GiftcardsTest@769f71a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- Applebees.GiftcardsTest -->
+      <class name="Applebees.NutritionandallergenTest">
+        <test-method status="PASS" signature="beforeclassnttest()[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13]" name="beforeclassnttest" is-config="true" duration-ms="1" started-at="2021-07-18T09:35:07Z" finished-at="2021-07-18T09:35:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclassnttest -->
+        <test-method status="PASS" signature="startTestCase(org.testng.ITestResult)[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13]" name="startTestCase" is-config="true" duration-ms="0" started-at="2021-07-18T09:35:07Z" finished-at="2021-07-18T09:35:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cb1 status=SUCCESS method=NutritionandallergenTest.cb1()[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTestCase -->
+        <test-method status="PASS" signature="cb1()[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13]" name="cb1" duration-ms="9798" started-at="2021-07-18T09:35:07Z" finished-at="2021-07-18T09:35:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cb1 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13]" name="getResult" is-config="true" duration-ms="1" started-at="2021-07-18T09:35:17Z" finished-at="2021-07-18T09:35:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cb1 status=SUCCESS method=NutritionandallergenTest.cb1()[pri:0, instance:Applebees.NutritionandallergenTest@4c9f8c13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- Applebees.NutritionandallergenTest -->
+      <class name="Applebees.ApsHomePageTest">
+        <test-method status="PASS" signature="beginResult()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="beginResult" is-config="true" duration-ms="125" started-at="2021-07-18T09:32:03Z" finished-at="2021-07-18T09:32:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beginResult -->
+        <test-method status="PASS" signature="startbrowser()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="startbrowser" is-config="true" duration-ms="82400" started-at="2021-07-18T09:32:03Z" finished-at="2021-07-18T09:33:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startbrowser -->
+        <test-method status="PASS" signature="beforeclassmethod()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="beforeclassmethod" is-config="true" duration-ms="0" started-at="2021-07-18T09:33:25Z" finished-at="2021-07-18T09:33:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclassmethod -->
+        <test-method status="PASS" signature="startTestCase(org.testng.ITestResult)[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="startTestCase" is-config="true" duration-ms="9" started-at="2021-07-18T09:33:25Z" finished-at="2021-07-18T09:33:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hp status=SUCCESS method=ApsHomePageTest.hp()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTestCase -->
+        <test-method status="PASS" signature="hp()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="hp" duration-ms="92294" started-at="2021-07-18T09:33:25Z" finished-at="2021-07-18T09:34:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hp -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="getResult" is-config="true" duration-ms="7" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hp status=SUCCESS method=ApsHomePageTest.hp()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="cb()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="cb" is-config="true" duration-ms="2093" started-at="2021-07-18T09:35:17Z" finished-at="2021-07-18T09:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cb -->
-        <test-method status="PASS" signature="endResult()[pri:0, instance:Applebees.GiftcardsTest@70e8f8e]" name="endResult" is-config="true" duration-ms="245" started-at="2020-04-10T09:29:18Z" finished-at="2020-04-10T09:29:18Z">
+        <test-method status="PASS" signature="endResult()[pri:0, instance:Applebees.ApsHomePageTest@76908cc0]" name="endResult" is-config="true" duration-ms="552" started-at="2021-07-18T09:35:19Z" finished-at="2021-07-18T09:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endResult -->
-      </class> <!-- Applebees.GiftcardsTest -->
-    </test> <!-- Test1 -->
+      </class> <!-- Applebees.ApsHomePageTest -->
+      <class name="Applebees.ApsMenuDisplayed">
+        <test-method status="PASS" signature="beforeclassmenu()[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76]" name="beforeclassmenu" is-config="true" duration-ms="0" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclassmenu -->
+        <test-method status="PASS" signature="startTestCase(org.testng.ITestResult)[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76]" name="startTestCase" is-config="true" duration-ms="0" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=menudisplayed status=SUCCESS method=ApsMenuDisplayed.menudisplayed()[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTestCase -->
+        <test-method status="PASS" signature="menudisplayed()[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76]" name="menudisplayed" duration-ms="22" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menudisplayed -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76]" name="getResult" is-config="true" duration-ms="1" started-at="2021-07-18T09:34:57Z" finished-at="2021-07-18T09:34:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=menudisplayed status=SUCCESS method=ApsMenuDisplayed.menudisplayed()[pri:0, instance:Applebees.ApsMenuDisplayed@49b0b76] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- Applebees.ApsMenuDisplayed -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

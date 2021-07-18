@@ -18,6 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -41,7 +42,7 @@ public class Base extends extentreport
 	public static Logger log= LogManager.getLogger(Base.class.getName());
 
 	
-	@BeforeTest
+	@BeforeTest(alwaysRun = true)
 	public WebDriver startbrowser() throws IOException
 	{
 	
@@ -80,24 +81,26 @@ public class Base extends extentreport
 	
 	}
 	
-	@AfterTest
+	@AfterTest(alwaysRun = true)
 	public void cb() throws IOException, InterruptedException
 	
 	{
 		//wait = new WebDriverWait(driver,3);
 		//.driverwait.withTimeout(timeout)
 		
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.close();
 		log.info("browser closed");
 		
 	}
 	
-public void getSS(String result) throws IOException
+public static String getSS(String result) throws IOException
 	{
 File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-FileHandler.copy(src,new File("./SS/"+result+"screenshot.png"));
-	//return result;
+String destination = "./SS/"+result+"screenshot.png";
+File dest = new File(destination);
+FileHandler.copy(src,dest);
+return destination;
 	
 	} 
 }

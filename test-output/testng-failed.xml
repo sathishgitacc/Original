@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
+      <class name="Applebees.GiftcardsTest">
+        <methods>
+          <include name="endResult"/>
+          <include name="gcpage"/>
+          <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
+          <include name="beginResult"/>
+          <include name="startbrowser"/>
+        </methods>
+      </class> <!-- Applebees.GiftcardsTest -->
       <class name="Applebees.ApsHomePageTest">
         <methods>
           <include name="endResult"/>
           <include name="hp"/>
           <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
           <include name="beginResult"/>
           <include name="startbrowser"/>
         </methods>
       </class> <!-- Applebees.ApsHomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

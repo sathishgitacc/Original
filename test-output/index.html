@@ -49,17 +49,17 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\workspace\Apstestgit\testngAps.xml</span>
+                    <span>D:\workspace\Apstestgit\testngpackage.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Suite">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Applebees.NutritionandallergenTest" hash-for-method="cb1">cb1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Applebees.GiftcardsTest" hash-for-method="gcpage">gcpage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Applebees.ApsHomePageTest" hash-for-method="hp">hp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Applebees.ApsMenuDisplayed" hash-for-method="menudisplayed">menudisplayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,14 +135,29 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Applebees.GiftcardsTest</span>
+              <span class="class-name">Applebees.ApsMenuDisplayed</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="gcpage">
-                  </a> <!-- gcpage -->
-                  <span class="method-name">gcpage</span>
+                  <a name="menudisplayed">
+                  </a> <!-- menudisplayed -->
+                  <span class="method-name">menudisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Applebees.NutritionandallergenTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cb1">
+                  </a> <!-- cb1 -->
+                  <span class="method-name">cb1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -152,29 +177,42 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Applebees.GiftcardsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="gcpage">
+                  </a> <!-- gcpage -->
+                  <span class="method-name">gcpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\workspace\Apstestgit\testngAps.xml</span>
+            <span class="header-content">D:\workspace\Apstestgit\testngpackage.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;customeListeners.lis&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;Applebees&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Applebees.ApsHomePageTest&quot;/&gt;
+      &lt;class name=&quot;Applebees.ApsMenuDisplayed&quot;/&gt;
+      &lt;class name=&quot;Applebees.GiftcardsTest&quot;/&gt;
+      &lt;class name=&quot;Applebees.NutritionandallergenTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test1&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;Applebees.GiftcardsTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,10 +224,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test1 (1 class)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,6 +234,14 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">gcpage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -215,20 +258,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'hp')
 data.setCell(0, 2, 'Applebees.ApsHomePageTest')
-data.setCell(0, 3, 41216);
+data.setCell(0, 3, 92294);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'gcpage')
-data.setCell(1, 2, 'Applebees.GiftcardsTest')
-data.setCell(1, 3, 10802);
+data.setCell(1, 1, 'cb1')
+data.setCell(1, 2, 'Applebees.NutritionandallergenTest')
+data.setCell(1, 3, 9798);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'gcpage')
+data.setCell(2, 2, 'Applebees.GiftcardsTest')
+data.setCell(2, 3, 9421);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'menudisplayed')
+data.setCell(3, 2, 'Applebees.ApsMenuDisplayed')
+data.setCell(3, 3, 22);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -243,9 +294,48 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Applebees.ApsMenuDisplayed</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">endResult</span>
+                <br/>
+                <span class="ignored-method-name">cb</span>
+                <br/>
+                <span class="ignored-method-name">beginResult</span>
+                <br/>
+                <span class="ignored-method-name">startbrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Applebees.NutritionandallergenTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">endResult</span>
+                <br/>
+                <span class="ignored-method-name">cb</span>
+                <br/>
+                <span class="ignored-method-name">beginResult</span>
+                <br/>
+                <span class="ignored-method-name">startbrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Applebees.GiftcardsTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">endResult</span>
+                <br/>
+                <span class="ignored-method-name">cb</span>
+                <br/>
+                <span class="ignored-method-name">beginResult</span>
+                <br/>
+                <span class="ignored-method-name">startbrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -254,44 +344,98 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Applebees.GiftcardsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Applebees.ApsHomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beginResult</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Applebees.ApsHomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startbrowser</span>
-                <span class="method-start">117 ms</span>
+                <span class="method-start">125 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeclassmethod</span>
+                <span class="method-start">82540 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startTestCase([TestResult name=hp status=SUCCESS method=ApsHomePageTest.hp()[pri:0, instance:Applebees.ApsHomePage...)</span>
+                <span class="method-start">82548 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">hp</span>
-                <span class="method-start">16397 ms</span>
+                <span class="method-start">82557 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">cb</span>
-                <span class="method-start">57615 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=hp status=SUCCESS method=ApsHomePageTest.hp()[pri:0, instance:Applebees.ApsHomePage...)</span>
+                <span class="method-start">174853 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Applebees.ApsMenuDisplayed</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeclassmenu</span>
+                <span class="method-start">174861 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startTestCase([TestResult name=menudisplayed status=SUCCESS method=ApsMenuDisplayed.menudisplayed()[pri:0, instanc...)</span>
+                <span class="method-start">174861 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">menudisplayed</span>
+                <span class="method-start">174862 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=menudisplayed status=SUCCESS method=ApsMenuDisplayed.menudisplayed()[pri:0, instanc...)</span>
+                <span class="method-start">174885 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Applebees.GiftcardsTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">startbrowser</span>
-                <span class="method-start">58701 ms</span>
-              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeclassgctest</span>
+                <span class="method-start">174886 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startTestCase([TestResult name=gcpage status=SUCCESS method=GiftcardsTest.gcpage()[pri:0, instance:Applebees.Giftc...)</span>
+                <span class="method-start">174887 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">gcpage</span>
-                <span class="method-start">76055 ms</span>
+                <span class="method-start">174888 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=gcpage status=SUCCESS method=GiftcardsTest.gcpage()[pri:0, instance:Applebees.Giftc...)</span>
+                <span class="method-start">184310 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Applebees.NutritionandallergenTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeclassnttest</span>
+                <span class="method-start">184310 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">startTestCase([TestResult name=cb1 status=SUCCESS method=NutritionandallergenTest.cb1()[pri:0, instance:Applebees....)</span>
+                <span class="method-start">184311 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cb1</span>
+                <span class="method-start">184311 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=cb1 status=SUCCESS method=NutritionandallergenTest.cb1()[pri:0, instance:Applebees....)</span>
+                <span class="method-start">194110 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Applebees.ApsHomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">cb</span>
-                <span class="method-start">86857 ms</span>
+                <span class="method-start">194111 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">endResult</span>
-                <span class="method-start">87931 ms</span>
+                <span class="method-start">196290 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

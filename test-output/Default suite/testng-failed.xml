@@ -8,7 +8,10 @@
           <include name="endResult"/>
           <include name="hp"/>
           <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
           <include name="beginResult"/>
+          <include name="beforeclassmethod"/>
           <include name="startbrowser"/>
         </methods>
       </class> <!-- Applebees.ApsHomePageTest -->

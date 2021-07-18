@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -40,12 +42,23 @@ public class ApsHomePageTest extends Base{
 //	public JavascriptExecutor executor = (JavascriptExecutor)driver;
 	public WebElement e,e1,e2,e3,e4;
 	
+
+	
+	
+	@BeforeClass(alwaysRun = true)
+	public void beforeclassmethod()
+	{
+		testCaseName = "ApsHomePageTest Test Git1";
+   	    testCaseDesc =  "End to end test Desc";
+		category = "Smoke";
+		author = "Sathish";	
+	}
 	
 	@Test
 	public void hp() throws IOException
 	
 	{
-		test = extent.createTest("test");
+		//test = extent.createTest("End to end test");
 		HomePageObjects ho = new HomePageObjects(driver);
 		
 		ho.Signin().click();
@@ -82,10 +95,10 @@ public class ApsHomePageTest extends Base{
 		
 		e1 =  mpo.SelectM1();
 		executor.executeScript("arguments[0].click();",e1); 
-		e2 = mpo.SelectNM1();
-		executor.executeScript("arguments[0].click();",e2);
-		e3 =  mpo.SelectM2();
-		executor.executeScript("arguments[0].click();",e3);
+		//e2 = mpo.SelectNM1();
+	//	executor.executeScript("arguments[0].click();",e2);
+	//	e3 =  mpo.SelectM2();
+	//	executor.executeScript("arguments[0].click();",e3);
 		mpo.Submit().click();
 		
 	  wait = new WebDriverWait(driver,3);  
@@ -101,7 +114,10 @@ public class ApsHomePageTest extends Base{
 		
 		e4 =  mpo.Po();
 		executor.executeScript("arguments[0].click();",e4);
-		test.log(Status.PASS,"Pass");
+		//test.log(Status.PASS,"Pass");
     }
+	
+
+	
 }
 	
