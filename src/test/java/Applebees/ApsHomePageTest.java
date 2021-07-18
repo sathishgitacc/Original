@@ -48,7 +48,7 @@ public class ApsHomePageTest extends Base{
 	@BeforeClass(alwaysRun = true)
 	public void beforeclassmethod()
 	{
-		testCaseName = "ApsHomePageTest Test Git1";
+		testCaseName = "ApsHomePageTest Test Git12";
    	    testCaseDesc =  "End to end test Desc";
 		category = "Smoke";
 		author = "Sathish";	
