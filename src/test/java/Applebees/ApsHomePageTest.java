@@ -73,6 +73,7 @@ public class ApsHomePageTest extends Base{
 		lpo.Pwd().sendKeys(data.get(2));
 		
 		System.out.println("Valid Credentials given hereeea");
+		System.out.println("Valid Credentials given hereeea");
 		lpo.Login().click();
 		lpo.MenuClickClick().click();
 		lpo.Locsubnav().click();
