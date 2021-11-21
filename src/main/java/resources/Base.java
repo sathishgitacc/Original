@@ -91,6 +91,7 @@ public class Base extends extentreport
 		Thread.sleep(2000);
 		driver.close();
 		log.info("browser closed");
+		System.out.println("Hi1");
 		
 	}
 	
@@ -101,6 +102,8 @@ String destination = "./SS/"+result+"screenshot.png";
 File dest = new File(destination);
 FileHandler.copy(src,dest);
 return destination;
+
 	
 	} 
+
 }

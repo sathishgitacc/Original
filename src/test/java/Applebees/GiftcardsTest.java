@@ -19,7 +19,7 @@ public class GiftcardsTest extends Base
 	@BeforeClass(alwaysRun = true)
 	public void beforeclassgctest()
 	{
-		testCaseName = "GC Page";
+		testCaseName = "GC Page TC Name";
    	    testCaseDesc =  "GC Page Desc";
 		category = "Smoke";
 		author = "Sathish";	
