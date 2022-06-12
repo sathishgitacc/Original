@@ -92,7 +92,7 @@ public class Base extends extentreport
 		Thread.sleep(2000);
 		driver.close();
 		log.info("browser closed");
-		System.out.println("Hi11");
+		System.out.println("Hi111");
 		
 	}
 	
