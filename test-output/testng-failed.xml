@@ -2,11 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
     <classes>
       <class name="Applebees.GiftcardsTest">
         <methods>
@@ -22,4 +17,20 @@
       </class> <!-- Applebees.GiftcardsTest -->
     </classes>
   </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="Applebees.ApsHomePageTest">
+        <methods>
+          <include name="endResult"/>
+          <include name="hp"/>
+          <include name="cb"/>
+          <include name="getResult"/>
+          <include name="startTestCase"/>
+          <include name="beginResult"/>
+          <include name="beforeclassmethod"/>
+          <include name="startbrowser"/>
+        </methods>
+      </class> <!-- Applebees.ApsHomePageTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
